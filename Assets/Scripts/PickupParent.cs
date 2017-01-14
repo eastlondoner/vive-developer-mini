@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 
@@ -14,7 +14,7 @@ public class PickupParent : MonoBehaviour {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
 	}
 	
-	void FixedUpdate () {
+    void FixedUpdate () {
         device = SteamVR_Controller.Input((int)trackedObj.index);
 
         if (device.GetTouch(SteamVR_Controller.ButtonMask.Trigger))
